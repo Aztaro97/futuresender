@@ -12,16 +12,18 @@
   </head>
   <body>
     <div class="container">
-		<div
+      <div
         style="max-width: 500px; background: #182e8a"
         class="mx-auto my-5 px-5 py-5"
-		>
-		<h3 class="text-white text-center mb-5">Local Money Transfer</h3>
+      >
+        <h3 class="text-white text-center mb-5">Local Money Transfer</h3>
         <div class="flex flex-col gap-5">
           <button
             type="button"
             style="background-color: #fdb813; width: 100%"
             class="btn text-white mb-4"
+            data-toggle="modal"
+            data-target="#exampleModal2"
           >
             Send Money
           </button>
@@ -67,23 +69,35 @@
               alt="Responsive image"
             />
           </div>
-          <!-- <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div
+      class="modal fade2"
+      id="exampleModal2"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel2">Scan QR Code</h5>
             <button
               type="button"
-              class="btn btn-secondary"
+              class="close"
               data-dismiss="modal"
+              aria-label="Close"
             >
-              Close
+              <span aria-hidden="true">&times;</span>
             </button>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-            >
-              Save changes
-            </button>
-          </div> -->
+          </div>
+          <div class="modal-body">
+            <video width="100%" autoplay="true" id="videoElement"></video>
+          </div>
         </div>
       </div>
     </div>
@@ -104,5 +118,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="./app.js"></script>
   </body>
 </html>
